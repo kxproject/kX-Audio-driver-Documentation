@@ -3,6 +3,7 @@ A Beginner's Guide to DSP Programming.pdf -- Most recent kX DSP guide (revised b
 
 Some PDFs from the kX Knowledgebase site:
 
+
 BPM Studio guide.pdf -- HowTo: Sound Blaster Audigy 2 ZS & BPM Studio 4.9 - Written by Jeroen Zelle
 DSP_Guide-ru.pdf -- DSP Guide in Russian - by Alexander Pavlov
 kX DSP Effects in an ASIO host.pdf
