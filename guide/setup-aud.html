@@ -1,0 +1,85 @@
+<!--kX Getting Started Guide - How to record Audio in an ASIO host-->
+
+<style type="text/css">
+<!--
+.style1 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+
+<a name="top">
+
+<p>This part of the guide will show you how to record Audio from the &quot;Line
+  In&quot; or
+  &quot;Mic&quot; ports on your soundcard, using Logic as an example.</p>
+<p>Note: This procedure will be different for each ASIO host sequencer, if you
+  know enough about the sequencer you have, read this section and try to setup
+  your sequencer. If you cannot do this search the <a href="http://www.driverheaven.net/forumdisplay.php?s=&forumid=67" target="new">kX
+  Forums</a> for an answer.</p>
+<p>  <span class="style1 style1">Certain Soundblaster Live 5.1 Models, SB0060 & SB010x,
+    have ASIO mapping errors, ie the ASIO inputs on the epilog in the DSP do not
+    match up with the ASIO inputs in the host, and as I have one of these cards,
+    I will show you the steps on how to bypass this, but for users of different
+    cards, those steps will be marked with a "*" and are optional. </span></p>
+<p><font face="Arial, Helvetica, sans-serif">his installation was carried out
+    on Windows XP Professional with a custome theme, so don't be alarmed if the
+  message boxes look a little wierd or some don't pop up.</font></p>
+<p>Lets open up the AC-97 Page<br>
+  <img src="pic/mic-ac97.gif" width="600" height="340">  <br>
+  This guide will focus on recording from the Mic(2), if you need to record from
+  Line In, substitute &quot;Line In&quot; in the &quot;Record From&quot; dropdown menu (1)<br>
+  Don't forget to unmute Line In if you are using it</p>
+<p>    Now go to the Ins &amp; Outs Page<br>
+  <img src="pic/aurec-io.gif" width="600" height="340"><br>
+  Unmute 
+  and raise the level of the AC-97 Slider <br> 
+    <br>
+    Open up the DSP window.<br>
+    <img src="pic/dsp-basic.gif" width="800" height="599"><br>
+    You can see that all prolog inputs are also routed to ASIO channels, but we
+    need to know which channels we are using. <br>
+    <img src="pic/aurec-acl.gif" width="168" height="173"><img src="pic/aurec-acr.gif" width="168" height="173"><br>
+    The AC-97 Channels route to&hellip;<br>
+    <img src="pic/aurec-epl.gif" width="99" height="377"><img src="pic/aurec-epr.gif" width="99" height="377"><br>
+  ASIO 4/5 In the epilog.</p>
+<p>Note: In some ASIO hosts, ASIO inputs 4/5 may be called 5/6 due to the count
+  starting from 1 instead of 0 as is the case with kX. </p>
+<p>Connect your microphone or line in source (such as a synthesizer) to the correct
+  jack. See <a href="hardinst.html#line">here</a> for details on how to do this if you do not know how.</p>
+<p class="style1">Now it is time to load your ASIO host program. I will use Logic
+  version 5.5.1 <br>
+  Note: This procedure will be different for each ASIO host sequencer, if you
+  know enough about the sequencer you have, read this section and try to setup
+  your sequencer. If you cannot do this search the <a href="http://www.driverheaven.net/forumdisplay.php?s=&forumid=67" target="new">kX
+  Forums</a> for an answer.<br>
+      <br>
+  In the Audio Driver setup window<br>
+  <img src="pic/sfrec-lasio.gif" width="450" height="355">
+<p class="style1">Make sure that you ASIO device is kX ASIO Driver and that it
+  is active.<br>
+  Click the control panel button&hellip;<br>
+  <img src="pic/rec-asio.gif" width="285" height="201"><br>
+  &hellip;and make sure that the samplerate is 48000hz (48khz), otherwise you will not
+  be able to record. <br>
+</p>
+<p class="style1">Open the track mixer&hellip;<br>
+    <img src="pic/sfrec-ac1.gif" width="67" height="442">-&gt;<img src="pic/sfrec-ac2.gif" width="67" height="442"><br>
+    Select the first audio track and if you are using a stereo line in source,
+    set the audio channel to Stereo by clicking the Stereo/Mono switch.<br>
+    <img src="pic/aurec-ac1.gif" width="67" height="442"><br>
+  Change the input to input 5/6<br>
+  <img src="pic/aurec-ac2.gif" width="67" height="442"><br>
+  And press the &quot;REC&quot; button.</p>
+<p class="style1">If you cannot see level in the peak metre when speaking into
+  the Mic or sending audio to the Line In, check whether the kX Router and DSP
+  are correct. </p>
+<p class="style1">*Or change inputs until you find level in the peak metre<br>
+  <img src="pic/sfrec-ac5.gif" width="67" height="442">  <br>
+  <br>
+  Now you can record using the Transport<br>
+  <img src="pic/rec-trans.gif" width="405" height="85">  <br>
+    <br>
+        
+    <span class="style1"><a href="#top">Top</a> <a href="index.html">Index</a></span>
+</p>
+<hr align="center">kX Guide &copy 2004 by Chris Stannard, a kX
+user. All rights reserved.

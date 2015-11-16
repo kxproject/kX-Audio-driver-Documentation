@@ -1,0 +1,68 @@
+<!--kX Getting Started Guide - Fixing the Bass  problem in 4.1 Setup-->
+
+
+  <p><font face="arial">This section of the guide will show you how to
+      fix the reduced or &quot;washed out&quot; bass when using a 4.1 speaker
+      setup, where there is a crossover in the subwoofer (sub takes low end of
+      stereo or quadraphonic audio signal).</font></p>
+  <p><font face="arial">Note:If you use a 5.1 speaker setup, which requires 6
+      connections, then you do not need to read this.</font></p>
+  <font face="arial">
+  <p>Before I begin to show you how to fix the bass problem, I will first explain
+    why it occurs. </p>
+  <p>Take a simple waveform&hellip;<br>
+  <img src="pic/phase-wave1.gif" width="100" height="100"> </p>
+  </font>
+  <p><font face="arial">&hellip;and then invert its phase<br>
+  <img src="pic/phase-wave2.gif" width="100" height="100"> </font></p>
+  <font face="arial"><p>You can clearly see that these two waveforms are opposite to each other.
+    Now what happens when these two are added together?<br>
+    <img src="pic/phase-wave1.gif" width="100" height="100"><h1>+<br>
+      <img src="pic/phase-wave2.gif" width="100" height="100"><br>
+      =<br>
+      <img src="pic/phase-wave3.gif" width="100" height="100"></h1>
+    <p>You can see that the two waveforms cancel each other out, leaving silence.
+      This is called destructive interference.</p>
+    <p>Believe it or not, but this occurs in many Soundblaster Live! and Audigy
+      models, this is because there are two different codecs, one for the front,
+      and one for the rear, and they are out of phase with each other.</p>
+    <p>The subwoofer takes the 4 inputs, Front and Rear Left and Right, signals,
+      and cuts off the lower bass end, and then adds it together to create the
+      subwoofer output. </p>
+    </font>
+  <p><font face="arial">And as the outputs are out of phase, destructive interference
+      affects the bass sound, although this does not cause total silence, there
+      is a great reduction occuring along the bass line, making it sound &quot;Washed
+      Out&quot;.</font></p>
+  <p><font face="arial">Note: Some speakers designed especially for the Live!
+      series cards automatically invert the phase of the rear outputs, so if
+      the bass sounds perfect, you do not need to read this. </font></p>
+  <p><font face="arial">To correct for this, we must use the DSP<br>
+      <img src="pic/dsp-basic.gif" width="800" height="599">      <br>
+      To learn the basics of DSP routing which you will need for this guide,
+      see <a href="dsp.html">here</a>.</font></p>
+    <p><font face="arial">What we need is a plugin that inverts the phase of
+        a signal, this plugin is called &quot;Phase&quot; <br>
+    <img src="pic/phase-dsp1.gif" width="800" height="600"> <br>
+  Add the phase plugin to the DSP</font></p>
+    <p><font face="arial"><img src="pic/phase-dsp2.gif" width="800" height="600"></font></p>
+    <p><font face="arial">Now connect the &quot;sL&quot; and &quot;sR&quot; outputs from the Surrounder
+        to the inputs in the Phase module<br>
+        <img src="pic/phase-dsp3.gif" width="800" height="600"><br>
+        And then connect the outputs of the Phase module to the &quot;Analog Rear
+        Left&quot; and &quot;Analog Rear Right&quot; connectors on the Epilog.</font></p>
+    <p><font face="arial">Make sure that if you connect &quot;sL' to the top input
+        on the Phase module, that you connect the top output to &quot;Analog Rear
+        Left&quot; on the epilog.<br>
+    <img src="pic/phase-dsp4.gif" width="800" height="600"><br>
+    Notice that once you connect the Phase module to the epilog, the wires that
+    went directly from the Surrounder to the Epilog disappear as you replace
+    the input.</font></p>
+    <p><font face="arial">This should now fix the bass problem with 4.1 speakers </font></p>
+    <p class="style1"><a href="#top"><font face="Arial, Helvetica, sans-serif">Top</font></a> <font face="Arial, Helvetica, sans-serif"><a href="index.html">Index</a></font></p>
+    <hr><font face="arial">
+kX Guide &copy 2004 by Chris Stannard, a kX
+user. All rights reserved.
+</font>
+
+

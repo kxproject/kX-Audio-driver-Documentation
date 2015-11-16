@@ -1,0 +1,96 @@
+<!--kX Getting Started Guide - Basic DSP Routings-->
+<style type="text/css">
+<!--
+.style1 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+
+<style type="text/css">
+<!--
+.style1 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+
+
+
+<a name="top">
+
+<p>This part of the guide will show you the basic of DSP routing.
+<p>The DSP<br>
+  <img src="pic/dsp-basic.gif" width="800" height="599"> <br>
+    Note: The &quot;Timbre&quot; plugin looks different to the rest of the plugins
+    as it was replaced by using <a href="http://www.driverheaven.net/showthread.php?s=&threadid=9923">Max
+    M.'s UFX pack</a>, which is designed for experience kX
+    users who want more flexibility in the DSP. This is not required and I only
+     recommended these for advanced users. 
+<p>Looks confusing at first glance, doesn't it?<br>
+  The good news is that it isn't.<br>
+  <br>
+  Think of it as a rack mounted system in a studio, devices with inputs (red
+  squares on the DSP plugins) and outputs (blue squares on the DSP plugins).
+  All these devices to something to the signal.<br>
+  <br>
+  Those plugins with out inputs (FXBus &amp; prolog) represent the beginning
+  of the system, with the epilog represening the end.<br>
+  <br>
+  More simply, Prolog and FXBus contain the inputs, epilog containts the outputs,
+  and everything inbetween does something to the signal. <br>
+  <br>
+  Lets start with a basic
+  plugin, &quot;Vol&quot;<br>
+  <img src="pic/dsp-vol.gif" width="395" height="104">  
+<p>The settings box is opened by double clicking on the plugin in the DSP window.
+<p><img src="pic/dsp-volin.gif" width="62" height="62"><br>
+  When you hold the mouse over an input or output box, a tooltip will popup telling
+    you the name/function of the connector.<br>
+    For a simple plugin like this it is almost unneccesary, but for a larger,
+    more complex plugin, such as the surrounder&hellip;<br>
+    <img src="pic/dsp-surrounder.gif" width="80" height="157">    <br>
+  &hellip;these tooltips become vital.
+<p>To add a new plugin module to the DSP&hellip;<br>
+  <img src="pic/dsp-menu.gif" width="352" height="424">  <br>
+  &hellip;right click on an empty space in the DSP and select the &quot;Add Effect/Plugin&quot;
+  option. You now have a menu of additional plugins you can load. <br>
+    <br>
+    Ok, to draw in the &quot;wires&quot; that connect each plugin module to each other,
+      you need to click on a connector square, and then drag the mouse over
+    until you reach the desired connector, and the release the mouse. A blue
+    wire should now be in place.
+<p>Note: You can only connect Inputs (Red) to Outputs (Blue), In-In and Out-Out
+  will not work<br>
+  <br>
+  To make things easy i am using a cleared DSP.<br>
+  <img src="pic/dsp-begin.gif" width="306" height="394">  <br>
+  Here we have the FXBus which contains the inputs, Vol which processes the signal
+  and epilog, which contains the outputs.<br>
+  <img src="pic/dsp-begin2.gif" width="306" height="394">  <br>
+  Draw a wire between the first FXBus in to the Vol module's input.<br>
+  <img src="pic/dsp-begin3.gif" width="306" height="394">  <br>
+  Then draw a wire between the Vol's output and the first epilog Input<br>
+  <img src="pic/dsp-begin4.gif" width="306" height="394">  <br>
+  Congratulations, you have now 
+  created a DSP where you can control the volume of the Left sound channel, if
+  the kX Router window is using default settings.
+<p>Note: Although each output of a module can be connect to multiple inputs on
+  other modules, each input can only be connected once.
+<p><b><u>The FXBus</u></b>
+  <br>
+  <img src="pic/fxbus.gif" width="51" height="198"><br>
+  The FXBus be confusing to some users, as it describes its outputs as &quot;FXBusX&quot;.<br>Where
+  &quot;X&quot; is a number.
+<p>But each of these outputs&hellip;<br>
+  <img src="pic/mixer-router.gif" width="450" height="367"> <br>&hellip;matches the
+  numbers assigned in the <a href="mixer.html#route">kX Router</a>.<br>The first two numbers per device are
+  the main outs, and the second two are the fx sends, that in the default DSP,
+  get routed to the Reverb and Chorus effects.
+<p>Using the FXBus in the DSP is now easier if you check what each out put is
+  in the kX Router 
+<p>The easiest way to learn the DSP is by trying to build your own layouts ,
+  and I hope this guide helped you to understand the basics of the DSP well enough
+  for you to be able to give it a go and making your own DSP setup. <br>
+
+    <br>
+    <span class="style1"><a href="#top">Top</a> <a href="index.html">Index</a></span>
+<hr align="center">
+kX Guide &copy 2004 by Chris Stannard, a kX
+user. All rights reserved.

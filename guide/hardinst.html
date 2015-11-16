@@ -1,0 +1,128 @@
+<!--kX Getting Started Guide - Installing the Soundblaster Card into your computer-->
+<style type="text/css">
+<!--
+.style1 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+
+<style type="text/css">
+<!--
+.style1 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+
+
+
+<a name="top">
+
+<p>This part of the guide will show you how to physically install the Soundblaster
+  card into your computer .</p>
+<p>Note:<br> 
+  Although the manual that comes with the Soundblaster card shows basic
+  installation methods, and may seem straight-forward even without these instructions,
+  this part of the guide will describe how to do so in a way that bypasses possible
+  IRQ conflicts and interference to analog audio, causing noise.</p>
+<p>I apologise for the poor quality of these images, but these are only to complement
+  my guide and not to showcase. The images are low quality to reduce the file
+  size and download times for users with slow connections. </p>
+<p> This installation guide uses the Soundblaster Live! 5.1 soundcard as an example,
+    and as I do not have add-ons such as the Live! Drive and Digital Daughter
+  Card, I cannot provide instructions on how to install these, however, the instructions
+  that come with the manual should be sufficient.</p>
+<p><img src="pic/sblive.jpg" width="638" height="479"></p>
+<p>  You will need a screwdriver.<br>
+</p>
+<p><a href="#bios">Checking BIOS for IRQ assignments</a>  <br>
+    <br>
+    <a href="#pci">Installing the card in the PCI slot</a><br>
+    <br>
+    <a href="#line">Connecting in Speakers and Microphones, etc.</a><br>
+    <br>
+  <a href="#ts">Troubleshooting</a> <br>
+</p>
+<p><a name="bios"></a><b><u>Checking BIOS for IRQ assignments</u></b></p>
+<p>Note: Those with high-end graphics card where the cooling system takes up
+  the first PCI slot, then this does not concern you.</p>
+<p>This step is important, as some motherboards may lock 2 PCI slots at the same
+  IRQ, which if both slots are occupied and one of those slots is occupied by
+  the Soundblaster card, it will cause a whole series of errors.<br>
+  You will need to check you motherboard's manual to find how to access the PCI
+  IRQ assignments<br>
+  <img src="pic/bios.jpg" width="479" height="146"><br> 
+  As you can see here, with the menu item &quot;PCI 1/5&quot;, PCI slots 1 and 5 are locked
+      at the same IRQ, this means that you should not place the card in either
+        of these slots unless both are unoccupied - but placing a card here makes
+        more work when you need to add another PCI card into the board, you have
+        to move the Soundblaster card away from these slots.<br>
+        <br>
+        Installing into PCI slots 2, 3 or 4 will ensure that the card works perfectly,
+        provided there are no conflicts due to other devices that may be built
+        into the motherboard and attached to the PCI bus, such as RAID and SATA
+  chips. </p>
+<p><a href="#top">Top</a> <a href="index.html">Index</a><br>
+  </p>
+<p><b><u><a name="pci"></a>Installing the card in the PCI slot</u></b></p>
+<p><b><u>
+    </u></b>First touch an exposed metal part of your case to get rid of static
+    electricity, then remove the power cord, and all other cables attatached.<br>
+    <img src="pic/caseopen.jpg" width="666" height="499">
+    <br>
+    Remove the side cover to your
+    computer.<br>
+    You may need the screwdriver for this.<br>
+    <img src="pic/open.jpg" width="705" height="528"> <br>
+  Lay the case flat, with the AGP/PCI expansion cards vertical.<br>
+  <img src="pic/sbliveinst.jpg" width="695" height="521"><br>
+  Install the live card into PCI slot 2,3 or 4 (or one that does not have a shared
+  IRQ)<br>
+  Secure the card to the case with a screw <br>
+    Connect any add-on cards as instructed in the manual.
+<p><a href="#top">Top</a> <a href="index.html">Index</a>
+<p>  <b><u><a name="line"></a>Connecting Speakers
+  and Microphones, etc.</u></b><br>
+    <img src="pic/hi-io.jpg" width="697" height="127"><br>
+    1.Connect the Front Speakers to the black* (rear) port.<br>
+    2. 
+    Connect the rear speakers
+    to the green* (front) port. (reason for this swap is explained <span class="style1 style1"><a href="http://www.kxproject.com/rear.php" target="new">here</a></span>).<br>
+    3. Connect
+    microphone to the pink* port.<br>
+    4. Connect the
+    line in to the blue* port.<br>
+    5^. Connect
+    the centre/LFE OR connect digital speaker  to the orange* (centre/LFE/digital)
+    port.<br>
+    6^. Connect joystick/game pad or Midi converter cable to the UART<br>
+    <br>
+    ^Note: Some cards may not have these connectors, or may have different connectors.
+    Check your manual to find out which connectors you have.<br>
+    <br>
+    Note: Some of the higher end cards in each series feature Gold Plated
+    Connectors, and you need to be careful which port you are using.
+<p><a href="#top">Top</a> <a href="index.html">Index</a>
+<p><b><u><a name="ts"></a>Troubleshooting</u></b>
+<p>Note: This step requires you have installed the kX Project Drivers.
+<p>If the kX Mixer fails to load on start up and an error message appears, or
+  sound does not play correctly, open the Control Panel and open the System Control
+  Panel. <br>
+  <img src="pic/hi-ts1.gif" width="419" height="485"><br>
+  Click the &quot;Hardware&quot;
+  tab and then click the &quot;Device Manager&quot; tab.<br>(On earlier Windows
+  versions simply click the &quot;Device Manager&quot; tab.<br>
+  <img src="pic/hi-ts2.gif" width="296" height="690"> <br>If the kX Audio device(1)
+  shows an error symbol, like the ones on the CD drives(2), select the kX Audio
+  device and click the properties button(3). <br>
+  <img src="pic/hi-ts3.gif" width="411" height="453"><br>If the Conflicting Device
+  list(1) shows conflicts, attempt to change the settings(2) (It is currently
+  disable on my system)<br>If this is impossible it may be due to the shared
+  PCI IRQ issue mentioned earlier on this page, move the Soundblaster card to
+  another PCI slot and test.<br>
+  <br>
+  If you still cannot get the card to work, search the <a href="http://www.driverheaven.net/forumdisplay.php?s=&forumid=67" target="new">kX
+  Forums</a>.
+<p> <br>
+    <span class="style1"><a href="#top">Top</a> <a href="index.html">Index</a></span>
+  <hr align="center">
+kX Guide &copy 2004 by Chris Stannard, a kX
+user. All rights reserved.
+
